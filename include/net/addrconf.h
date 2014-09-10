@@ -205,7 +205,6 @@ extern bool ipv6_chk_acast_addr(struct net *net, struct net_device *dev,
 				const struct in6_addr *addr);
 extern void ipv6_ac_destroy_dev(struct inet6_dev *idev);
 
-
 /* Device notifier */
 extern int register_inet6addr_notifier(struct notifier_block *nb);
 extern int unregister_inet6addr_notifier(struct notifier_block *nb);
