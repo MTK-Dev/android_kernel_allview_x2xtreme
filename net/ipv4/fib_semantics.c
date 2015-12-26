@@ -629,7 +629,11 @@ static int fib_check_nh(struct fib_config *cfg, struct fib_info *fi,
 				.daddr = nh->nh_gw,
 				.flowi4_scope = cfg->fc_scope + 1,
 				.flowi4_oif = nh->nh_oif,
+<<<<<<< HEAD
 				.flowi4_iif = LOOPBACK_IFINDEX,
+=======
+                                .flowi4_iif = LOOPBACK_IFINDEX,
+>>>>>>> 6a8cd96... net: ipv4, fib: pass LOOPBACK_IFINDEX instead of 0 to flowi4_iif
 			};
 
 			/* It is not necessary, but requires a bit of thinking */
