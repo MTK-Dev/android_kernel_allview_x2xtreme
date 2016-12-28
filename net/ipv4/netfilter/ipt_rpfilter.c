@@ -90,11 +90,7 @@ static bool rpfilter_mt(const struct sk_buff *skb, struct xt_action_param *par)
 		if (ipv4_is_zeronet(iph->saddr))
 			return ipv4_is_local_multicast(iph->daddr) ^ invert;
 	}
-<<<<<<< HEAD
 	flow.flowi4_iif = LOOPBACK_IFINDEX;
-=======
-        flow.flowi4_iif = LOOPBACK_IFINDEX;
->>>>>>> 6a8cd96... net: ipv4, fib: pass LOOPBACK_IFINDEX instead of 0 to flowi4_iif
 	flow.daddr = iph->saddr;
 	flow.saddr = rpfilter_get_saddr(iph->daddr);
 	flow.flowi4_oif = 0;
